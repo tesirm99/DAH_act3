@@ -11,6 +11,14 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'camera',
+    loadChildren: () => import('./camera/camera.module').then( m => m.CameraPageModule)
+  },
+  {
+    path: 'wip',
+    loadChildren: () => import('./wip/wip.module').then( m => m.WipPageModule)
+  },
 ];
 
 @NgModule({

@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="#"></ion-back-button>
+    </ion-buttons>
+    <ion-title>WIP</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <main class="wipContent" >
+    <div *ngFor="let mock of wipMocks">
+      <ion-card (click)="showToast()">
+        <ion-card-header>
+          <ion-card-title>{{mock.title}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-label>{{mock.description}}</ion-label>
+          <ion-img [src]="mock.image" style="height:200px; width: 200px;"></ion-img>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </main>
+  
+</ion-content>

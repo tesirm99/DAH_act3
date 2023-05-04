@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Camera</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="photo === undefined || photo === null" class="noImageDiv">
+    <img alt="There is no photo" src="assets/empty-image.png"/>
+  </div>
+  <div *ngIf="photo !== undefined && photo !== null" class="photo">
+    <img alt="Photo" [src]="photo" height="70%" />
+    <ion-card *ngIf="latitude !== undefined && latitude !== null">
+      <ion-card-header>
+        <ion-card-title>Coordinates</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item>Latitude: {{ latitude }}</ion-item>
+        <ion-item>Longitude: {{ longitude }}</ion-item>
+        <ion-item>Accuracy: {{ accuracy }}</ion-item>
+      </ion-card-content>
+    </ion-card>
+  </div>
+  
+  <div class="phtBtn">
+    <ion-fab vertical="bottom" horizontal="center">
+      <ion-fab-button (click)="takePicture()"> 
+        <ion-icon name="camera"></ion-icon> 
+      </ion-fab-button>
+    </ion-fab>
+  </div>
+  
+</ion-content>

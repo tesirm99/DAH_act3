@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Actividad 3
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,12 +9,28 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Actividad 3</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <h2>Actividad 3 - Creación de una aplicación Ionic con funciones nativas</h2>
+    <p>
+      Con esta aplicación podrás tomar fotos y conocer la localización donde han sido tomadas.
+    </p>
+
+    <div class="buttonContainer">
+      <ion-button (click)="navigateToCamera()">
+        Camera
+      </ion-button>
+  
+      <ion-button (click)="navigateToWIP()">
+        WIP
+      </ion-button>
+    </div>
+    
+
   </div>
+
+  
 </ion-content>

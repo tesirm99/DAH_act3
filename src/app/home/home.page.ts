@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,17 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(private router: Router) {} 
+
+  navigateToCamera() {
+    this.router.navigate(['/camera']);
+    console.log('Navigating to camera');
+  }
+
+  navigateToWIP() {
+    this.router.navigate(['/wip']);
+    console.log('Navigating to WIP');
+  }
+
 
 }
